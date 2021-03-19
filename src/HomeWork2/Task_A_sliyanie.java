@@ -1,5 +1,8 @@
 package HomeWork2;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Arrays;
 
 public class Task_A_sliyanie {
@@ -35,12 +38,20 @@ public class Task_A_sliyanie {
             return result;
         }
     }
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        int[] array3 = {1, 7, 4, 5, 3, 6, 10, 11, 2, 10};
-        array3 = sortArray(array3);
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(reader.readLine());
+        String[] text = reader.readLine().split(" ");
+        int[] array = new int[n];
 
-        for (int x : array3) {
+        for (int i = 0; i < n; i++) {
+            array[i] = Integer.parseInt(text[i]);
+        }
+
+        array = sortArray(array);
+
+        for (int x : array) {
             System.out.print(x + " ");
         }
     }

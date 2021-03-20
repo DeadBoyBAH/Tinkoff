@@ -32,7 +32,11 @@ public class Task_E_pribl_poisk {
                 if(!f(array1[m], array2[i]).equals("No")) l = m;
                 else r = m;
             }
-            System.out.println(array1[l]);
+            if(l != array1.length - 1 && l != -1) {
+                if (array2[i] - array1[l] <= array1[l + 1] - array2[i]) System.out.println(array1[l]);
+                else System.out.println(array1[l + 1]);
+            } else if(l != -1)System.out.println(array1[l]);
+            else System.out.println(array1[0]);
         }
     }
 }

@@ -9,8 +9,8 @@ public class Task_F_chislo {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        int l = 1;
-        int r = 1000000;
+        int l = 0;
+        int r = 1000001;
         int count = 0;
         while(r - l > 1 && count < 25) {
             int mid = (r + l)/2;
